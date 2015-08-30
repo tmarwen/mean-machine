@@ -1,0 +1,29 @@
+{
+  "name": "ng-route-experiments",
+  "version": "1.0.0",
+  "description": "ngRoute experiments backed by Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tmarwen/mean-machine.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "ngRoute",
+    "test",
+    "experiments",
+    "Node.js"
+  ],
+  "author": "Marwen Trabelsi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmarwen/mean-machine/issues"
+  },
+  "homepage": "https://github.com/tmarwen/mean-machine",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
