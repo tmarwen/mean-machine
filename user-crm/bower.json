@@ -1,0 +1,30 @@
+{
+  "name": "user-crm",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tmarwen/mean-machine",
+  "authors": [
+    "Marwen Trabelsi"
+  ],
+  "description": "User CRM application built with the MEAN stack",
+  "main": "server.js",
+  "keywords": [
+    "USER",
+    "CRM",
+    "MEAN"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  }
+}
