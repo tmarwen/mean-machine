@@ -1,0 +1,30 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "My TODOs",
+  "main": "server.js",
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tmarwen/mean-machine.git"
+  },
+  "keywords": [
+    "TODO",
+    "AngularJS",
+    "ng"
+  ],
+  "author": "Marwen Trabelsi <marwen.trabelsi.insat@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmarwen/mean-machine/issues"
+  },
+  "homepage": "https://github.com/tmarwen/mean-machine#readme"
+}
