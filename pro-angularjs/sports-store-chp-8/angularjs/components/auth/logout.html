@@ -1,0 +1,11 @@
+<style>
+.navbar-right { float: right !important; margin-right: 5px;}
+.navbar-text { margin-right: 10px; }
+</style>
+
+<div class="navbar-right" ng-show="loggedUser.username">
+	<div class="navbar-text">
+		<b>Hi {{loggedUser.username}}</b>
+	</div>
+	<button class="btn btn-xs btn-primary navbar-btn" ng-click="logout()">Logout</button>
+</div>
