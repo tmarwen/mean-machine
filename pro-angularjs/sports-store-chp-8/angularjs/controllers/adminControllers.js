@@ -4,32 +4,12 @@ angular.module("sportsStoreAdmin")
 .constant("ordersUrl", "http://localhost:5500/orders")
 .controller("adminCtrl", function($scope, $http, userInfoUrl) {
 
-	$scope.loggedUser = {};
-
-	$http.get(userInfoUrl, { withCredentials: true })
-				.success(function(data) {
-					$scope.loggedUser = data;
-				})
-				.error(function(error) {
-					$scope.loggedUser = {
-						username : "anonymous"
-					}
-				});
-
-	$scope.$on("loggedIn", function(event) { // needed to avoid refresh as per the route policy
-		$http.get(userInfoUrl, { withCredentials: true })
-				.success(function(data) {
-					$scope.loggedUser = data;
-				})
-				.error(function(error) {
-					$scope.loggedUser = {
-						username : "anonymous"
-					}
-				});
-	});
+	$scope.data = {
+		loggedUser: {}
+	};
 
 })
-.controller("authCtrl", function($scope, $http, $location, authUrl) {
+.controller("authCtrl", function($scope, $http, $location, authUrl, userInfoUrl) {
 
 	$scope.authenticate = function (user, pass) {
 		$http.post(authUrl,
@@ -41,8 +21,14 @@ angular.module("sportsStoreAdmin")
 			withCredentials: true
 		})
 		.success(function (data) {
-			$scope.$emit("loggedIn"); // emit login event
-			$location.path("/main");
+			$http.get(userInfoUrl, { withCredentials: true })
+				.success(function(data) {
+					$scope.data.loggedUser = data;
+					$location.path("/main");
+				})
+				.error(function(error) {
+					$location.path("/login");
+				});
 		})
 		.error(function (error) {
 			$scope.authenticationError = error;

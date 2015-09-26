@@ -3,9 +3,9 @@
 .navbar-text { margin-right: 10px; }
 </style>
 
-<div class="navbar-right" ng-show="loggedUser.username">
+<div class="navbar-right" ng-show="data.loggedUser.username">
 	<div class="navbar-text">
-		<b>Hi {{loggedUser.username}}</b>
+		<b>Hi {{data.loggedUser.username}}</b>
 	</div>
 	<button class="btn btn-xs btn-primary navbar-btn" ng-click="logout()">Logout</button>
 </div>

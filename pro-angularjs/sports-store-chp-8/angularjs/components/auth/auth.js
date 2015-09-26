@@ -10,7 +10,7 @@ angular.module("sportsStoreAdmin")
 			$scope.logout = function() {
 				$http.post(logoutUrl, { withCredentials: true })
 				.success(function(data) {
-					$scope.loggedUser = {};
+					$scope.data.loggedUser = {};
 					$location.path("/login");
 				})
 				.error(function(error) {
